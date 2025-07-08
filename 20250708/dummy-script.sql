@@ -140,30 +140,35 @@ INSERT INTO `TBL_MENU` (`CATEGORY_CODE`, `SHOP_CODE`, `MENU_NAME`, `MENU_PRICE`,
 (17, 2, '탈모 방지 케어', 80000, 70, 1);
 
 -- TBL_MESSAGE_TEMPLATE (23 rows)
-INSERT INTO `TBL_MESSAGE_TEMPLATE` (`SHOP_CODE`, `TEMPLATE_CONTENT`, `TEMPLATE_TYPE`) VALUES
-(1, '예약이 확정되었습니다.', 'INFORMATIONAL'),
-(1, '결제가 완료되었습니다.', 'INFORMATIONAL'),
-(2, '예약이 취소되었습니다.', 'INFORMATIONAL'),
-(1, '방문을 환영합니다.', 'INFORMATIONAL'),
-(2, '시술이 완료되었습니다.', 'INFORMATIONAL'),
-(2, '이벤트 안내드립니다.', 'PROMOTIONAL'),
-(1, '생일 축하드립니다. 할인 쿠폰 지급해드립니다.', 'PROMOTIONAL'),
-(1, '예약 시간이 임박했습니다.', 'INFORMATIONAL'),
-(2, '샵 휴무 안내', 'INFORMATIONAL'),
-(2, '포인트 적립 안내', 'INFORMATIONAL'),
-(1, '주차 안내', 'INFORMATIONAL'),
-(1, '예약 확정 문자', 'INFORMATIONAL'),
-(2, '예약 취소 안내', 'INFORMATIONAL'),
-(1, '매장 방문 안내', 'INFORMATIONAL'),
-(1, '예약 완료 안내', 'INFORMATIONAL'),
-(2, '감사 인사. 할인 안내드립니다.', 'PROMOTIONAL'),
-(2, '예약 시간 변경 안내', 'INFORMATIONAL'),
-(1, '시술 전 안내', 'INFORMATIONAL'),
-(1, '시술 후 안내', 'INFORMATIONAL'),
-(2, '회원 등급 안내', 'INFORMATIONAL'),
-(2, '정기 고객 안내', 'INFORMATIONAL'),
-(2, '재방문 안내 재 방문시 할인!', 'PROMOTIONAL'),
-(1, '샵 이벤트 종료', 'PROMOTIONAL');
+INSERT INTO `TBL_MESSAGE_TEMPLATE` (
+    `SHOP_CODE`, 
+    `TEMPLATE_TITLE`, 
+    `TEMPLATE_CONTENT`, 
+    `TEMPLATE_TYPE`
+) VALUES
+(1, '예약 확정 알림', '예약이 확정되었습니다.', 'INFORMATIONAL'),
+(1, '결제 완료 알림', '결제가 완료되었습니다.', 'INFORMATIONAL'),
+(2, '예약 취소 알림', '예약이 취소되었습니다.', 'INFORMATIONAL'),
+(1, '방문 환영 인사', '방문을 환영합니다.', 'INFORMATIONAL'),
+(2, '시술 완료 안내', '시술이 완료되었습니다.', 'INFORMATIONAL'),
+(2, '이벤트 안내', '이벤트 안내드립니다.', 'PROMOTIONAL'),
+(1, '생일 축하 메시지', '생일 축하드립니다. 할인 쿠폰 지급해드립니다.', 'PROMOTIONAL'),
+(1, '예약 임박 알림', '예약 시간이 임박했습니다.', 'INFORMATIONAL'),
+(2, '휴무 안내', '샵 휴무 안내', 'INFORMATIONAL'),
+(2, '포인트 적립 안내', '포인트 적립 안내', 'INFORMATIONAL'),
+(1, '주차 안내', '주차 안내', 'INFORMATIONAL'),
+(1, '예약 확정 문자', '예약 확정 문자', 'INFORMATIONAL'),
+(2, '예약 취소 접수', '예약 취소 안내', 'INFORMATIONAL'),
+(1, '매장 방문 안내', '매장 방문 안내', 'INFORMATIONAL'),
+(1, '예약 완료 확인', '예약 완료 안내', 'INFORMATIONAL'),
+(2, '감사 인사', '감사 인사. 할인 안내드립니다.', 'PROMOTIONAL'),
+(2, '예약 변경 안내', '예약 시간 변경 안내', 'INFORMATIONAL'),
+(1, '시술 전 안내', '시술 전 안내', 'INFORMATIONAL'),
+(1, '시술 후 관리법', '시술 후 안내', 'INFORMATIONAL'),
+(2, '회원 등급 안내', '회원 등급 안내', 'INFORMATIONAL'),
+(2, '정기고객 혜택', '정기 고객 안내', 'INFORMATIONAL'),
+(2, '재방문 할인', '재방문 안내 재 방문시 할인!', 'PROMOTIONAL'),
+(1, '이벤트 종료 안내', '샵 이벤트 종료', 'PROMOTIONAL');
 
 
 
@@ -257,16 +262,17 @@ INSERT INTO `TBL_MSG_SEND_BATCH` (
     `SEND_DATE`, 
     `SEND_TIME`, 
     `SEND_TYPE`, 
+    `SUBJECT`,
     `TOTAL_COUNT`, 
     `SUCCESS_COUNT`, 
     `FAIL_COUNT`
 ) VALUES
--- 배치 1: 샵 1에서 개별 발송
-(1, 1, 1, '2025-07-01', '10:00:00', 'INDIVIDUAL', 12, 10, 2),
--- 배치 2: 샵 2에서 그룹 발송  
-(2, 2, 15, '2025-07-15', '14:00:00', 'GROUP', 15, 13, 2),
--- 배치 3: 샵 1에서 그룹 발송
-(3, 1, 8, '2025-07-25', '16:30:00', 'GROUP', 3, 3, 0);
+-- 배치 1: 샵 1에서 예약 확정 메시지 개별 발송
+(1, 1, 1, '2025-07-01', '10:00:00', 'INDIVIDUAL', '7월 5일 예약 확정 안내', 12, 10, 2),
+-- 배치 2: 샵 2에서 프로모션 메시지 그룹 발송  
+(2, 2, 6, '2025-07-15', '14:00:00', 'GROUP', '7월 특가 이벤트 안내', 15, 13, 2),
+-- 배치 3: 샵 1에서 리뷰 요청 그룹 발송
+(3, 1, 16, '2025-07-25', '16:30:00', 'GROUP', '서비스 만족도 및 리뷰 요청', 3, 3, 0);
 
 -- TBL_SHOP_MSG_HISTORY 더미 데이터 (30건)
 INSERT INTO `TBL_SHOP_MSG_HISTORY` (
