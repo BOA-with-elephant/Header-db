@@ -245,8 +245,8 @@ INSERT INTO TBL_MESSAGE_TEMPLATE (SHOP_CODE, TEMPLATE_TITLE, TEMPLATE_CONTENT, T
 -- TBL_RESERVATION (100건 - 1번샵 1,2번만 결제완료/취소, 나머지는 예약확정)
 INSERT INTO TBL_RESERVATION (USER_CODE, SHOP_CODE, MENU_CODE, RESV_DATE, RESV_TIME, USER_COMMENT, RESV_STATE) VALUES
 -- 1번샵 1,2번 예약 (결제완료, 결제취소)
-(3, 1, 1, '2025-06-15', '10:00:00', '레이어드 컷 원해요', '결제완료'),
-(4, 1, 2, '2025-06-16', '11:00:00', NULL, '결제취소'),
+(3, 1, 1, '2025-06-15', '10:00:00', '레이어드 컷 원해요', '시술완료'),
+(4, 1, 2, '2025-06-16', '11:00:00', NULL, '시술완료'),
 
 -- 나머지 98건은 모두 예약확정
 (5, 1, 3, '2025-06-17', '14:00:00', '애쉬브라운으로', '예약확정'),
