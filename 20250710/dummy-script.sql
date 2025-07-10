@@ -32,9 +32,9 @@ INSERT INTO TBL_USER (USER_ID, USER_PWD, IS_ADMIN, USER_NAME, USER_PHONE, BIRTHD
 ('jangbeomjun', 'jangbeomjun', 0, '장범준', '010-1024-1024', '1989-05-01', 0),
 ('leejeok', 'leejeok', 0, '이적', '010-1025-1025', '1974-02-28', 0),
 ('leeseunggi', 'leeseunggi', 0, '이승기', '010-1026-1026', '1987-01-13', 0),
-('iu', 'iu', 0, '아이유', '010-1027-1027', '1993-05-16', 0),
+('iu1234', 'iu1234', 0, '아이유', '010-1027-1027', '1993-05-16', 0),
 ('parkbogum', 'parkbogum', 0, '박보검', '010-1028-1028', '1993-06-16', 0),
-('suzy', 'suzy', 0, '수지', '010-1029-1029', '1994-10-10', 0),
+('suzy29', 'suzy29', 0, '수지', '010-1029-1029', '1994-10-10', 0),
 ('junghaein', 'junghaein', 0, '정해인', '010-1030-1030', '1988-04-01', 0),
 ('songjoongki', 'songjoongki', 0, '송중기', '010-1031-1031', '1985-09-19', 0),
 ('songhyekyo', 'songhyekyo', 0, '송혜교', '010-1032-1032', '1981-11-22', 0),
@@ -62,8 +62,8 @@ INSERT INTO TBL_USER (USER_ID, USER_PWD, IS_ADMIN, USER_NAME, USER_PHONE, BIRTHD
 ('choiminjung', 'choiminjung', 0, '최민정', '010-1054-1054', '1990-03-15', 0),
 ('parkjinyoung', 'parkjinyoung', 0, '박진영', '010-1055-1055', '1971-12-13', 0),
 ('leehyori', 'leehyori', 0, '이효리', '010-1056-1056', '1979-05-10', 0),
-('rain', 'rain', 0, '비', '010-1057-1057', '1982-06-25', 0),
-('boa', 'boa', 0, '보아', '010-1058-1058', '1986-11-05', 0),
+('rain57', 'rain57', 0, '비', '010-1057-1057', '1982-06-25', 0),
+('boa058', 'boa058', 0, '보아', '010-1058-1058', '1986-11-05', 0),
 ('sevenkim', 'sevenkim', 0, '세븐', '010-1059-1059', '1984-11-09', 0),
 ('shindongyeop', 'shindongyeop', 0, '신동엽', '010-1060-1060', '1971-02-17', 0),
 ('kimgurae', 'kimgurae', 0, '김구라', '010-1061-1061', '1970-01-03', 0),
@@ -242,9 +242,9 @@ INSERT INTO TBL_MESSAGE_TEMPLATE (SHOP_CODE, TEMPLATE_TITLE, TEMPLATE_CONTENT, T
 (5, '압구정점환영', '엘레강스 헤어 압구정점 귀빈 고객님 환영', 'WELCOME'),
 (5, '압구정점시술완료', '럭셔리 서비스 완료. 다시 찾아주세요', 'COMPLETE');
 
--- TBL_RESERVATION (100건 - 1번샵 1,2번만 결제완료/취소, 나머지는 예약확정)
+-- TBL_RESERVATION (100건 - 1번샵 1,2번만 시술완료, 나머지는 예약확정)
 INSERT INTO TBL_RESERVATION (USER_CODE, SHOP_CODE, MENU_CODE, RESV_DATE, RESV_TIME, USER_COMMENT, RESV_STATE) VALUES
--- 1번샵 1,2번 예약 (결제완료, 결제취소)
+-- 1번샵 1,2번 예약
 (3, 1, 1, '2025-06-15', '10:00:00', '레이어드 컷 원해요', '시술완료'),
 (4, 1, 2, '2025-06-16', '11:00:00', NULL, '시술완료'),
 
