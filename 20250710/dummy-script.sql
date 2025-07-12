@@ -19,7 +19,7 @@ INSERT INTO TBL_USER (USER_ID, USER_PWD, IS_ADMIN, USER_NAME, USER_PHONE, BIRTHD
 ('yoojaesuk', 'yoojaesuk', 0, '유재석', '010-1011-1011', '1970-08-14', 0),
 ('kanghodong', 'kanghodong', 0, '강호동', '010-1012-1012', '1972-06-11', 0),
 ('leesugeun', 'leesugeun', 0, '이수근', '010-1013-1013', '1975-02-03', 0),
-('haha', 'haha', 0, '하하', '010-1014-1014', '1979-08-20', 0),
+('haha14', 'haha14', 0, '하하', '010-1014-1014', '1979-08-20', 0),
 ('parkmyungsu', 'parkmyungsu', 0, '박명수', '010-1015-1015', '1970-12-01', 0),
 ('chosaeho', 'chosaeho', 0, '조세호', '010-1016-1016', '1982-08-09', 0),
 ('yangsehyung', 'yangsehyung', 0, '양세형', '010-1017-1017', '1985-04-21', 0),
@@ -102,7 +102,7 @@ INSERT INTO TBL_USER (USER_ID, USER_PWD, IS_ADMIN, USER_NAME, USER_PHONE, BIRTHD
 ('kimchaewon', 'kimchaewon', 0, '김채원', '010-1094-1094', '2000-08-01', 0),
 ('hongeunchae', 'hongeunchae', 0, '홍은채', '010-1095-1095', '2006-11-10', 0),
 ('huhjin', 'huhjin', 0, '허윤진', '010-1096-1096', '2001-10-08', 0),
-('nakokazuto', 'nakokazuto', 0, '나코야부키', '010-1097-1097', '2001-06-04', 0),
+('nakoyabuki', 'nakoyabuki', 0, '나코야부키', '010-1097-1097', '2001-06-04', 0),
 ('leegahyeon', 'leegahyeon', 0, '이가현', '010-1098-1098', '1999-02-03', 0),
 ('kimyoobin', 'kimyoobin', 0, '김유빈', '010-1099-1099', '2002-09-02', 0),
 ('parkseoeun', 'parkseoeun', 0, '박서은', '010-1100-1100', '2003-01-21', 0);
