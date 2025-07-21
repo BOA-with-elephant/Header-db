@@ -1,4 +1,4 @@
--- Create SHOPDB database if not exists
+-- Create HEADERDB database if not exists
 -- CREATE DATABASE IF NOT EXISTS `HEADERDB`;
 -- GRANT ALL PRIVILEGES ON HEADERDB.* TO 'ohgiraffers'@'%';
 
